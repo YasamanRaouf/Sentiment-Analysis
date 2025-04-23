@@ -20,12 +20,11 @@ This project focuses on large-scale sentiment analysis on user-generated text da
 - notebooks/ : Jupyter or Zeppelin notebooks
 - src/
   - main/
-    - scala/
-      - sentiment/ : Main Scala package
-        - Main.scala
-        - Preprocessing.scala
-        - SentimentModel.scala
-        - Utils.scala
+    - scala/ :Main Scala package
+      - Main.scala
+      - Preprocessing.scala
+      - SentimentModel.scala
+      - Utils.scala
 - reports/ : Evaluation and performance results
 - output/
   - models/ : Saved ML models
