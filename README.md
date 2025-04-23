@@ -14,38 +14,26 @@ This project focuses on large-scale sentiment analysis on user-generated text da
 
 ## 🧱 Project Structure
 
-
-sentiment-analysis-spark-scala/
-├── data/
-│   ├── raw/                  # Original datasets (e.g., Yelp, Twitter)
-│   └── processed/            # Cleaned and preprocessed data
-│
-├── notebooks/                # Jupyter or Zeppelin notebooks for EDA and prototyping
-│   └── eda.ipynb             # Exploratory Data Analysis notebook
-│
-├── src/
+📦 sentiment-analysis-spark
+├── 📁 data/                    # Directory for raw and processed datasets
+│   ├── raw/                   # Raw Yelp dataset (or Twitter, Reddit)
+│   └── processed/             # Cleaned and preprocessed text data
+├── 📁 notebooks/              # Jupyter / Zeppelin notebooks (if any used for exploration)
+├── 📁 src/                    # Scala source code
 │   └── main/
 │       └── scala/
-│           └── sentiment/    # Main Scala package
-│               ├── Main.scala           # Entry point of the application
-│               ├── Preprocessing.scala  # Text cleaning and preprocessing functions
-│               ├── SentimentModel.scala # Sentiment classification model implementation
-│               └── Utils.scala          # Helper functions and shared utilities
-│
-├── reports/
-│   └── sentiment-results.md  # Model evaluation and comparative results report
-│
-├── output/
-│   ├── models/               # Trained ML models saved by Spark MLlib
-│   └── plots/                # Visualizations and charts
-│
-├── project/                  # SBT project configuration
-│   └── build.properties
-│
-├── build.sbt                 # Main build file for Scala + Spark project
-├── README.md                 # Project overview and documentation
-├── .gitignore                # Files and folders to be ignored by Git
-└── LICENSE                   # License file
+│           ├── preprocessing/   # Text preprocessing modules (tokenizing, cleaning, etc.)
+│           ├── sentiment/      # Sentiment analysis logic and model training
+│           └── utils/          # Helper functions/utilities
+├── 📁 models/                 # Saved ML models (TF-IDF, Word2Vec, trained models)
+├── 📁 output/                 # Results like predictions, evaluation metrics
+├── 📁 reports/                # Final reports, performance comparison, visuals
+├── 📄 README.md               # Project description and setup
+├── 📄 .gitignore              # Git ignore file
+├── 📄 LICENSE                 # Apache 2.0 License
+└── 📄 build.sbt               # SBT build configuration file
+
+
 
 ##  ⚙️ Technologies Used
 
@@ -99,6 +87,17 @@ This project is licensed under the Apache License 2.0.
 Please look at the [LICENSE](./LICENSE) file for more details.
 
 ✨ Authors
-Yasaman Raouf Moghaddam
-MSc in Software Engineering
-GitHub: @YasamanRaouf
+## ✨ Authors
+
+**Aida Lashgary**  
+MSc in Software Engineering  
+GitHub: [@Lashgary](https://github.com/Lashgary)
+
+**Yasaman Raouf Moghaddam**  
+MSc in Software Engineering  
+GitHub: [@YasamanRaouf](https://github.com/YasamanRaouf)
+
+**Melika Sadoghi**  
+MSc in Software Engineering 
+GitHub: [@melikasadoghi](https://github.com/melikasadoghi)
+
