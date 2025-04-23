@@ -18,6 +18,7 @@ This project focuses on large-scale sentiment analysis on user-generated text da
   - raw/ : Original datasets (e.g., Yelp, Twitter)
   - processed/ : Cleaned and preprocessed data
 - notebooks/ : Jupyter or Zeppelin notebooks
+  - eda.ipynb
 - src/
   - main/
     - scala/ :Main Scala package
@@ -25,7 +26,10 @@ This project focuses on large-scale sentiment analysis on user-generated text da
       - Preprocessing.scala
       - SentimentModel.scala
       - Utils.scala
+- scripts/ :Script to convert Yelp JSON to CSV
+  - json_to_csv.py
 - reports/ : Evaluation and performance results
+  - sentiment-results.md
 - output/
   - models/ : Saved ML models
   - plots/ : Charts and visualizations
