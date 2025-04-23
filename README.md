@@ -14,24 +14,28 @@ This project focuses on large-scale sentiment analysis on user-generated text da
 
 ## 🧱 Project Structure
 
-📦 sentiment-analysis-spark
-├── 📁 data/                    # Directory for raw and processed datasets
-│   ├── raw/                   # Raw Yelp dataset (or Twitter, Reddit)
-│   └── processed/             # Cleaned and preprocessed text data
-├── 📁 notebooks/              # Jupyter / Zeppelin notebooks (if any used for exploration)
-├── 📁 src/                    # Scala source code
-│   └── main/
-│       └── scala/
-│           ├── preprocessing/   # Text preprocessing modules (tokenizing, cleaning, etc.)
-│           ├── sentiment/      # Sentiment analysis logic and model training
-│           └── utils/          # Helper functions/utilities
-├── 📁 models/                 # Saved ML models (TF-IDF, Word2Vec, trained models)
-├── 📁 output/                 # Results like predictions, evaluation metrics
-├── 📁 reports/                # Final reports, performance comparison, visuals
-├── 📄 README.md               # Project description and setup
-├── 📄 .gitignore              # Git ignore file
-├── 📄 LICENSE                 # Apache 2.0 License
-└── 📄 build.sbt               # SBT build configuration file
+- data/
+  - raw/ : Original datasets (e.g., Yelp, Twitter)
+  - processed/ : Cleaned and preprocessed data
+- notebooks/ : Jupyter or Zeppelin notebooks
+- src/
+  - main/
+    - scala/
+      - sentiment/ : Main Scala package
+        - Main.scala
+        - Preprocessing.scala
+        - SentimentModel.scala
+        - Utils.scala
+- reports/ : Evaluation and performance results
+- output/
+  - models/ : Saved ML models
+  - plots/ : Charts and visualizations
+- project/
+  - build.properties
+- build.sbt
+- .gitignore
+- LICENSE
+
 
 
 
