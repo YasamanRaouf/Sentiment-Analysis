@@ -17,4 +17,3 @@ object TextCleaner {
     df.withColumn("clean_text", cleanUDF(col(textCol)))
   }
 }
-

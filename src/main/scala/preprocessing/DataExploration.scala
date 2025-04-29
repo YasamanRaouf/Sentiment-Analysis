@@ -1,5 +1,6 @@
+
 // === File: DataExploration.scala ===
-package processing
+package preprocessing
 
 import org.apache.spark.sql.DataFrame
 
@@ -10,4 +11,3 @@ object DataExploration {
       .show(truncate = false)
   }
 }
-
