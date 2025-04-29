@@ -1,97 +1,82 @@
-# 🧠 Sentiment Analysis on Big Social Media Data using Apache Spark and Scala
+# Sentiment Analysis on Large-Scale Social Media Data using Apache Spark and Scala
 
-## 📌 Project Overview
+## Project Overview
+This project aims to analyze large-scale user-generated content from social media platforms (such as Twitter, Reddit, or Yelp) to determine user sentiment (positive, negative, or neutral). The analysis is performed using Apache Spark and Scala to ensure efficient distributed data processing.
 
-This project focuses on large-scale sentiment analysis on user-generated text data from social media platforms (e.g., Twitter, Reddit, Yelp). We utilize **Apache Spark** with **Scala** to perform distributed processing and Natural Language Processing (NLP) at scale.
+## Objectives
+- Process large-scale textual data with Spark and Scala
+- Optimize processing using RDDs, DataFrames, and Spark SQL
+- Apply NLP and ML algorithms for sentiment classification
+- Evaluate the impact of distributed processing on scalability and execution time
 
-## 🎯 Objectives
+## Project Structure
+```
+project-root/
+├── data/
+│   ├── raw/                      # Raw datasets (e.g., Yelp JSON files)
+│   └── processed/                # Cleaned and filtered data
+├── src/
+│   └── main/
+│       └── scala/
+│           ├── preprocessing/    # Data loading and cleaning
+│           │   ├── DataLoader.scala
+│           │   ├── TextCleaner.scala
+│           │   └── PreprocessingPipeline.scala
+│           └── processing/       # Filtering and statistical analysis
+│               ├── FilterUtils.scala
+│               ├── DataExploration.scala
+│               └── ProcessingPipeline.scala
+├── README.md
+└── build.sbt
+```
 
-- Efficient processing of large-scale text data using Apache Spark (RDD, DataFrame, Spark SQL)
-- Text cleaning, feature extraction (TF-IDF, Word2Vec)
-- Train and evaluate ML models (e.g., Logistic Regression, Naive Bayes, Random Forest)
-- Use Spark NLP for preprocessing
-- Analyze performance and scalability of distributed computing
+## Implementation Steps
+### Step 1: Data Collection and Preprocessing
+- Use the Yelp dataset to collect massive textual data
+- Clean data by removing stop words, links, emojis, and special characters
+- Tokenize and normalize the text using Spark NLP
 
-## 🧱 Project Structure
+### Step 2: Data Processing with Apache Spark
+- Load and manipulate data using RDDs and DataFrames
+- Apply MapReduce functions to filter irrelevant content
+- Perform statistical analysis using Spark SQL
 
-- data/
-  - raw/ : Original datasets (e.g., Yelp, Twitter)
-  - processed/ : Cleaned and preprocessed data
-- notebooks/ : Jupyter or Zeppelin notebooks
-  - eda.ipynb
-- src/
-  - main/
-    - scala/ :Main Scala package
-      - Main.scala
-      - Preprocessing.scala
-      - SentimentModel.scala
-      - Utils.scala
-- scripts/ :Script to convert Yelp JSON to CSV
-  - json_to_csv.py
-- reports/ : Evaluation and performance results
-  - sentiment-results.md
-- output/
-  - models/ : Saved ML models
-  - plots/ : Charts and visualizations
-- project/
-  - build.properties
-- build.sbt
-- .gitignore
-- LICENSE
+### Step 3: Sentiment Classification with Spark ML
+- Feature extraction using TF-IDF and Word2Vec
+- Train models such as Logistic Regression, Naïve Bayes, or Random Forest with Spark MLlib
+- Evaluate models using metrics like Accuracy and F1-score
 
+### Step 4: Distributed Optimization
+- Tune Spark’s parallelism settings for performance
+- Apply caching and partitioning strategies to boost speed
+- Test and analyze scalability
 
+### Step 5: Results Visualization and Evaluation
+- Visualize sentiment analysis results using charts
+- Compare the performance of different ML algorithms
+- Analyze the effect of data volume on model accuracy and processing time
 
+## Technologies Used
+| Technology      | Purpose                                           |
+|----------------|---------------------------------------------------|
+| Scala           | Programming language                             |
+| Apache Spark    | Distributed data processing                      |
+| Spark MLlib     | Large-scale machine learning                     |
+| Spark NLP       | Natural language processing                      |
+| HDFS / S3       | Big data storage                                 |
+| Spark SQL       | Text and statistical analysis                    |
+| Matplotlib / Seaborn | Visualization of analysis results           |
 
-##  ⚙️ Technologies Used
-
-Technology | Description
-Scala | Programming language used to implement Spark logic
-Apache Spark | Distributed data processing framework
-Spark MLlib | Machine learning at scale
-Spark NLP | NLP library built on top of Spark
-Spark SQL | SQL-based processing for structured data
-HDFS / S3 | Storage layer for large datasets
-Matplotlib / Seaborn | Data visualization (via Python notebooks)
-
-##  🚀 How to Run
-Clone the repo:
-
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/sentiment-analysis-spark-scala.git
-Navigate to project folder:
-
-bash
-Copy
-Edit
-cd sentiment-analysis-spark-scala
-Build the project using sbt:
-
-bash
-Copy
-Edit
-sbt compile
-Submit to Spark cluster or run locally:
-
-bash
-Copy
-Edit
-spark-submit-- class sentiment.Main target/scala-2.12/sentiment-analysis_2.12-1.0.jar
-📈 Expected Outputs
-Preprocessed datasets (cleaned text)
-
-Trained sentiment analysis model
-
-Accuracy, Precision, Recall, and F1-score for each model
-
-Performance comparison between different ML algorithms
-
-Visualizations of results and analysis
-
-📄 License
-This project is licensed under the Apache License 2.0.  
-Please look at the [LICENSE](./LICENSE) file for more details.
+## Expected Outputs
+1. A simple dashboard to display sentiment analysis results
+2. Optimized source code and sentiment model for large-scale data
+3. Final report including:
+   - Project title page
+   - Table of contents
+   - Abstract and Introduction
+   - Explanation of codebase
+   - Comparison of ML model results
+   - Performance evaluation of distributed vs. traditional methods
 
 ✨ Authors
 ## ✨ Authors
